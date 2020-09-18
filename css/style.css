@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+.mainDiv {
+    background-color: #7395f3;
+    margin: 0 auto;
+    height: 620px;
+    width: 620px;
+}
+.mainDiv > div {
+    height: 200px;
+    width: 200px;
+    color: white;
+    position: relative;
+    vertical-align: center;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.red {
+    background-color: red;
+    animation: ered 3s linear infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+.yellow {
+    background-color: yellow;
+    animation-duration: 3s;
+    animation: eyellow 3s linear infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    transition-property: transform;
+    transition-duration: 3s;
+}
+.green {
+    background-color: green;
+    animation-name: egreen;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes egreen {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@keyframes ered {
+    0% {top: -200px}
+    100% {top: 0px}
+}
+
+.yellow:hover {
+    transform: rotateY(180deg);
+}
